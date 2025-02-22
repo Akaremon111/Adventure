@@ -1,0 +1,22 @@
+﻿{
+  "entity": [
+    {
+      "Type": "Player",
+      "HP": 10,
+      "Speed": 5,
+      "Power": 3
+    },
+    {
+      "Type": "Enemy",
+      "HP": 20,
+      "Speed": 5,
+      "Power": 5
+    },
+    {
+      "Type": "Boss",
+      "HP": 100,
+      "Speed": 5,
+      "Power": 7
+    }
+  ]
+}
