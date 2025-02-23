@@ -30,12 +30,18 @@ public class PlayerClient : MonoBehaviour
 
     private void Awake()
     {
-        
+        // Serverに接続
+        JoinServer();
     }
 
-    private void ServerAccess()
+    /// <summary>
+    /// サーバーに接続する
+    /// </summary>
+    private void JoinServer()
     {
-        
+        // サーバーに接続
+        ws = new WebSocket("ws://127.0.0.1:1234/");
+        ws.Connect();
     }
 
     private void Update()
@@ -80,8 +86,8 @@ public class PlayerClient : MonoBehaviour
     /// </summary>
     private void SendPlayerInfo()
     {
-        //ws.Send(ValueX);
-        //ws.Send(ValueY);
-        //ws.Send(ValueZ);
+        ws.Send(ValueX);
+        ws.Send(ValueY);
+        ws.Send(ValueZ);
     }
 }
