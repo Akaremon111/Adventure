@@ -42,6 +42,8 @@ public class PlayerClient : MonoBehaviour
         // サーバーに接続
         ws = new WebSocket("ws://127.0.0.1:1234/");
         ws.Connect();
+
+        //ws.OnMessage += (sender, e) => testPos(e.Data);
     }
 
     private void Update()
@@ -86,8 +88,15 @@ public class PlayerClient : MonoBehaviour
     /// </summary>
     private void SendPlayerInfo()
     {
-        ws.Send(ValueX);
-        ws.Send(ValueY);
-        ws.Send(ValueZ);
+        string moveDate;
+
+        moveDate = $"{PlayerPos.x},{PlayerPos.y},{PlayerPos.z}";
+
+        ws.Send(moveDate);
     }
+
+    //private void testPos(string date)
+    //{
+    //    Debug.Log(date);
+    //}
 }

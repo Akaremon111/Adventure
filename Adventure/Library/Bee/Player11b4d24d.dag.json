@@ -288,7 +288,7 @@
       "DisplayName": "Writing boot.config_tyr4.info",
       "ActionType": "WriteFile",
       "PayloadOffset": 83,
-      "PayloadLength": 15584,
+      "PayloadLength": 15485,
       "PayloadDebugContentSnippet": "{\"System.Object\":null,\"Bee.Tun",
       "Inputs": [],
       "Outputs": [
@@ -382,15 +382,15 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.50f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.50f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.50f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.dll",
-        "C:/Users/nshun/Unity/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll",
-        "C:/Users/nshun/Unity/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.dll",
-        "C:/Users/nshun/Unity/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll",
-        "C:/Users/nshun/Unity/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.dll",
-        "C:/Users/nshun/Unity/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.dll",
-        "C:/Users/nshun/Unity/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.dll",
-        "C:/Users/nshun/Unity/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.dll",
-        "C:/Users/nshun/Unity/Adventure/Adventure/Library/PackageCache/com.unity.visualscripting@1.9.5/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll",
-        "C:/Users/nshun/Unity/Adventure/Adventure/Assets/Plugins/websocket-sharp.dll",
+        "F:/GitHub/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll",
+        "F:/GitHub/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.dll",
+        "F:/GitHub/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll",
+        "F:/GitHub/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.dll",
+        "F:/GitHub/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.dll",
+        "F:/GitHub/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.dll",
+        "F:/GitHub/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.dll",
+        "F:/GitHub/Adventure/Adventure/Library/PackageCache/com.unity.visualscripting@1.9.5/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll",
+        "F:/GitHub/Adventure/Adventure/Assets/Plugins/websocket-sharp.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.50f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Facades/netstandard.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.50f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Mono.Security.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.50f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.ComponentModel.Composition.dll",
@@ -1320,7 +1320,7 @@
       "DisplayName": "Copying Assembly-CSharp.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Users/nshun/Unity/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll"
+        "F:/GitHub/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll"
       ],
       "Outputs": [
         "Build/Adventure_Data/Managed/Assembly-CSharp.dll"
@@ -1332,7 +1332,7 @@
       "DisplayName": "Copying Unity.Timeline.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Users/nshun/Unity/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.dll"
+        "F:/GitHub/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.dll"
       ],
       "Outputs": [
         "Build/Adventure_Data/Managed/Unity.Timeline.dll"
@@ -1344,7 +1344,7 @@
       "DisplayName": "Copying UnityEngine.UI.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Users/nshun/Unity/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll"
+        "F:/GitHub/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll"
       ],
       "Outputs": [
         "Build/Adventure_Data/Managed/UnityEngine.UI.dll"
@@ -1356,7 +1356,7 @@
       "DisplayName": "Copying Unity.TextMeshPro.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Users/nshun/Unity/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.dll"
+        "F:/GitHub/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.dll"
       ],
       "Outputs": [
         "Build/Adventure_Data/Managed/Unity.TextMeshPro.dll"
@@ -1368,7 +1368,7 @@
       "DisplayName": "Copying Unity.VisualScripting.Core.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Users/nshun/Unity/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.dll"
+        "F:/GitHub/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.dll"
       ],
       "Outputs": [
         "Build/Adventure_Data/Managed/Unity.VisualScripting.Core.dll"
@@ -1380,7 +1380,7 @@
       "DisplayName": "Copying Unity.VisualScripting.State.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Users/nshun/Unity/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.dll"
+        "F:/GitHub/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.dll"
       ],
       "Outputs": [
         "Build/Adventure_Data/Managed/Unity.VisualScripting.State.dll"
@@ -1392,7 +1392,7 @@
       "DisplayName": "Copying Unity.VisualScripting.Flow.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Users/nshun/Unity/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.dll"
+        "F:/GitHub/Adventure/Adventure/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.dll"
       ],
       "Outputs": [
         "Build/Adventure_Data/Managed/Unity.VisualScripting.Flow.dll"
@@ -1404,7 +1404,7 @@
       "DisplayName": "Copying Unity.VisualScripting.Antlr3.Runtime.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Users/nshun/Unity/Adventure/Adventure/Library/PackageCache/com.unity.visualscripting@1.9.5/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+        "F:/GitHub/Adventure/Adventure/Library/PackageCache/com.unity.visualscripting@1.9.5/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
       ],
       "Outputs": [
         "Build/Adventure_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll"
@@ -1416,7 +1416,7 @@
       "DisplayName": "Copying websocket-sharp.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Users/nshun/Unity/Adventure/Adventure/Assets/Plugins/websocket-sharp.dll"
+        "F:/GitHub/Adventure/Adventure/Assets/Plugins/websocket-sharp.dll"
       ],
       "Outputs": [
         "Build/Adventure_Data/Managed/websocket-sharp.dll"
@@ -1679,7 +1679,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info",
       "DisplayName": "Writing app.info",
       "ActionType": "WriteFile",
-      "PayloadOffset": 15756,
+      "PayloadOffset": 15657,
       "PayloadLength": 24,
       "PayloadDebugContentSnippet": "DefaultCompany\nAdventure",
       "Inputs": [],
@@ -2345,6 +2345,6 @@
   "SharedResources": [],
   "Scanners": [],
   "Identifier": "Library/Bee/Player11b4d24d.dag.json",
-  "PayloadsFile": "C:/Users/nshun/Unity/Adventure/Adventure/Library/Bee/Player11b4d24d.dag.payloads",
+  "PayloadsFile": "F:/GitHub/Adventure/Adventure/Library/Bee/Player11b4d24d.dag.payloads",
   "RelativePathToRoot": "../.."
 }

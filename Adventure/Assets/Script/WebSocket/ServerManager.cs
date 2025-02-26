@@ -14,60 +14,66 @@ public class ServerManager : MonoBehaviour
         OpenServer();
     }
 
+    /// <summary>
+    /// サーバーの起動
+    /// </summary>
     private void OpenServer()
     {
-        //ポート番号を指定
+        // ポート番号を指定
         ws = new WebSocketServer("ws://127.0.0.1:1234");
-        //クライアントからの通信時の挙動を定義したクラス、「ExWebSocketBehavior」を登録
-        ws.AddWebSocketService<ExWebSocketBehavior>("/");
 
-        //サーバ起動
+        // 接続してきた人の処理
+        ws.AddWebSocketService<wsBehavior>("/");
+
+        // サーバの立ち上げ
         ws.Start();
     }
 
     /// <summary>
     /// WebSocketBehavior継承クラス
     /// </summary>
-    public class ExWebSocketBehavior : WebSocketBehavior
+    public class wsBehavior : WebSocketBehavior
     {
-        //現在接続している人を管理するリスト。
-        public static List<ExWebSocketBehavior> clientList = new List<ExWebSocketBehavior>();
+        // サーバーに接続している人を管理するリスト
+        public static List<wsBehavior> clientList = new List<wsBehavior>();
 
-        //接続者に番号を振るための変数。
-        static int globalSeq = 0;
+        // 接続者に番号を振るための変数。
+        static int globalpNumber = 0;
 
-        //自身の番号
-        int seq;
+        // 自身の番号
+        int pNumber;
 
         /// <summary>
         /// ログインしてきたときに呼ばれるメソッド
         /// </summary>
         protected override void OnOpen()
         {
-            // ログインしてきた人には、番号をつけて、リストに登録。
-            globalSeq++;
-            this.seq = globalSeq;
+            // ログインしてきた人に番号をつけて、リストに保存
+            globalpNumber++;
+            this.pNumber = globalpNumber;
             clientList.Add(this);
 
-            Debug.Log("Seq" + this.seq + " Login. (" + this.ID + ")");
+            Debug.Log("Player" + this.pNumber + " Login. (" + this.ID + ")");
 
-            //接続者全員にメッセージを送る
-            foreach (ExWebSocketBehavior client in clientList)
+            // 全員にメッセージを送る
+            foreach (wsBehavior client in clientList)
             {
-                client.Send("Seq:" + seq + " Login.");
+                client.Send("Player:" + pNumber + " Login.");
             }
         }
 
         /// <summary>
         /// 誰かがメッセージを送信してきたときに呼ばれるメソッド
         /// </summary>
-        protected override void OnMessage(MessageEventArgs e)
+        protected override void OnMessage(MessageEventArgs move)
         {
-            Debug.Log("Seq:" + seq + "..." + e.Data);
+            Debug.Log("Player:" + pNumber + "..." + move.Data);
             //接続者全員にメッセージを送る
-            foreach (ExWebSocketBehavior client in clientList)
+            foreach (wsBehavior client in clientList)
             {
-                client.Send("Seq:" + seq + "..." + e.Data);
+                client.Send("Player:" + pNumber + "..." + move.Data);
+
+                Debug.Log("Player:" + pNumber + "..." + move.Data);
             }
         }
 
@@ -76,15 +82,15 @@ public class ServerManager : MonoBehaviour
         /// </summary>
         protected override void OnClose(CloseEventArgs e)
         {
-            Debug.Log("Seq" + this.seq + " Logout. (" + this.ID + ")");
+            Debug.Log("Player" + this.pNumber + " Logout. (" + this.ID + ")");
 
-            //ログアウトした人を、リストから削除。
+            // ログアウトした人をリストから削除。
             clientList.Remove(this);
 
-            //接続者全員にメッセージを送る
-            foreach (ExWebSocketBehavior client in clientList)
+            // 全員にメッセージを送る
+            foreach (wsBehavior client in clientList)
             {
-                client.Send("Seq:" + seq + " Logout.");
+                client.Send("Player:" + pNumber + " Logout.");
             }
         }
     }

@@ -11,6 +11,20 @@ public class ClientManager : MonoBehaviour
     public Button sendButton;
     public TMP_InputField messageInput;
 
+    private void Awake()
+    {
+        //接続処理。接続先サーバと、ポート番号を指定する
+        ws = new WebSocket("ws://127.0.0.1:1234/");
+        ws.Connect();
+
+        //送信ボタンが押されたときに実行する処理「SendText」を登録する
+        sendButton.onClick.AddListener(SendText);
+        //サーバからメッセージを受信したときに実行する処理「RecvText」を登録する
+        ws.OnMessage += (sender, e) => RecvText(e.Data);
+        //サーバとの接続が切れたときに実行する処理「RecvClose」を登録する
+        ws.OnClose += (sender, e) => RecvClose();
+    }
+
     //サーバへ、メッセージを送信する
     public void SendText()
     {
@@ -26,19 +40,5 @@ public class ClientManager : MonoBehaviour
     public void RecvClose()
     {
         chatText.text = ("Close.");
-    }
-
-    void Start()
-    {
-        //接続処理。接続先サーバと、ポート番号を指定する
-        ws = new WebSocket("ws://127.0.0.1:1234/");
-        ws.Connect();
-
-        //送信ボタンが押されたときに実行する処理「SendText」を登録する
-        sendButton.onClick.AddListener(SendText);
-        //サーバからメッセージを受信したときに実行する処理「RecvText」を登録する
-        ws.OnMessage += (sender, e) => RecvText(e.Data);
-        //サーバとの接続が切れたときに実行する処理「RecvClose」を登録する
-        ws.OnClose += (sender, e) => RecvClose();
     }
 }
