@@ -63,21 +63,6 @@ public class ServerManager : MonoBehaviour
         }
 
         /// <summary>
-        /// 誰かがメッセージを送信してきたときに呼ばれるメソッド
-        /// </summary>
-        protected override void OnMessage(MessageEventArgs move)
-        {
-            Debug.Log("Player:" + pNumber + "..." + move.Data);
-            //接続者全員にメッセージを送る
-            foreach (wsBehavior client in clientList)
-            {
-                client.Send("Player:" + pNumber + "..." + move.Data);
-
-                Debug.Log("Player:" + pNumber + "..." + move.Data);
-            }
-        }
-
-        /// <summary>
         /// ログアウトしてきたときに呼ばれるメソッド
         /// </summary>
         protected override void OnClose(CloseEventArgs e)

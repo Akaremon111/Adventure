@@ -6,6 +6,11 @@ using UnityEngine.EventSystems;
 
 public class othersPlayer : MonoBehaviour
 {
+    // スクリプトの取得
+    [SerializeField]
+    private ClientManager clientManager;
+
+    // WebSocketのインスタンス
     private WebSocket ws;
 
     float x;
@@ -15,7 +20,8 @@ public class othersPlayer : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        ws = new WebSocket("ws://127.0.0.1:1234/");
+        // wsManagerの取得
+        ws = clientManager.wsManager;
 
         ws.OnMessage += (sender, e) => testPos(e.Data);
     }
@@ -27,16 +33,13 @@ public class othersPlayer : MonoBehaviour
         transform.position = new Vector3(x, y, z);
     }
 
-    private void testPos(string date)
+    private void testPos(string data)
     {
-        Debug.Log(date);
+        Debug.Log(data);
 
-        string[] positionData = date.Split(',');
-        if (positionData.Length == 3)
-        {
-            x = float.Parse(positionData[0]);
-            y = float.Parse(positionData[1]);
-            z = float.Parse(positionData[2]);
-        }
+        string[] positionData = data.Split(',');
+        x = float.Parse(positionData[0]);
+        y = float.Parse(positionData[1]);
+        z = float.Parse(positionData[2]);
     }
 }

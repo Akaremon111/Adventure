@@ -731,6 +731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5773a7f7305c88a4d9b3c44bfb3adb48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clientManager: {fileID: 1022225223}
 --- !u!1 &421817221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,9 +1375,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71f0e95529ddf743916cc49b1d80e63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chatText: {fileID: 261899513}
-  sendButton: {fileID: 1871879847}
-  messageInput: {fileID: 914507472}
 --- !u!4 &1022225224
 Transform:
   m_ObjectHideFlags: 0
@@ -1558,6 +1556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f73e7b3ea8afd8841898bfec19a93c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clientManager: {fileID: 1022225223}
 --- !u!65 &1129299448
 BoxCollider:
   m_ObjectHideFlags: 0
