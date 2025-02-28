@@ -309,6 +309,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.50f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.50f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Script/Json/LoadJson.cs"
+"Assets/Script/Player/othersPlayer.cs"
 "Assets/Script/Player/PlayerClient.cs"
 "Assets/Script/Player/PlayerController.cs"
 "Assets/Script/Player/PlayerManager.cs"

@@ -20,21 +20,6 @@ public class PlayerClient : MonoBehaviour
     {
         // wsManagerの取得
         ws = clientManager.wsManager;
-
-        // Serverに接続
-        JoinServer();
-    }
-
-    /// <summary>
-    /// サーバーに接続する
-    /// </summary>
-    private void JoinServer()
-    {
-        // サーバーに接続
-        ws = new WebSocket("ws://127.0.0.1:1234/");
-        ws.Connect();
-
-        //ws.OnMessage += (sender, e) => testPos(e.Data);
     }
 
     private void Update()

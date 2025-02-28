@@ -71,17 +71,17 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 17302}
+      Script: {instanceID: 17300}
     - Class: 114
-      Script: {instanceID: 18480}
+      Script: {instanceID: 18482}
     - Class: 114
-      Script: {instanceID: 19096}
+      Script: {instanceID: 19098}
     - Class: 114
-      Script: {instanceID: 19204}
+      Script: {instanceID: 19206}
     - Class: 114
-      Script: {instanceID: 19458}
+      Script: {instanceID: 19460}
     - Class: 114
-      Script: {instanceID: 20166}
+      Script: {instanceID: 20168}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -91,12 +91,6 @@ ScriptsOnlyBuild:
     - Class: 196
       Script: {instanceID: 0}
   scriptHashData:
-  - hash:
-      serializedVersion: 2
-      Hash: d41ab9b5ea92474f9c0a6937a0607ce1
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: ContentSizeFitter
   - hash:
       serializedVersion: 2
       Hash: 55060a7bf226ac385ce19ebd450f199f
@@ -267,6 +261,12 @@ ScriptsOnlyBuild:
     className: TMP_TextSelector_A
   - hash:
       serializedVersion: 2
+      Hash: d23feb5ab069ad785f3ee77d1f4aebb0
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: othersPlayer
+  - hash:
+      serializedVersion: 2
       Hash: fce9b835d1e8b08e7ecea8da19f21986
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -379,6 +379,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTransformParentChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: d41ab9b5ea92474f9c0a6937a0607ce1
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: ContentSizeFitter
   - hash:
       serializedVersion: 2
       Hash: c6369b4cc3be620d6c9300e920bc3d52
@@ -813,7 +819,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 2b255ca94a54125395f9e96b1328bc05
+      Hash: b09b74babf401ca43d3233a9139b1477
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ClientManager
@@ -963,7 +969,7 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
-      Hash: 455dd47ea347e5639281dfd3a9580663
+      Hash: 1adecfb99e67a5958d8bfeb20de2fa05
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerClient
@@ -1162,4 +1168,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/ServerScene.unity
-  playerPath: C:/Users/nshun/Unity/Adventure/Adventure/Build/Adventure.exe
+  playerPath: F:/GitHub/Adventure/Adventure/Build/Adventure.exe

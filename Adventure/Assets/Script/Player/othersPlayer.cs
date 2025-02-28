@@ -23,6 +23,7 @@ public class othersPlayer : MonoBehaviour
         // wsManagerの取得
         ws = clientManager.wsManager;
 
+        // サーバーにtestPos関数を登録する
         ws.OnMessage += (sender, e) => testPos(e.Data);
     }
 
@@ -35,11 +36,16 @@ public class othersPlayer : MonoBehaviour
 
     private void testPos(string data)
     {
-        Debug.Log(data);
-
         string[] positionData = data.Split(',');
-        x = float.Parse(positionData[0]);
-        y = float.Parse(positionData[1]);
-        z = float.Parse(positionData[2]);
+        if (positionData.Length >= 3)
+        {
+            float.TryParse(positionData[0], out x);
+            float.TryParse(positionData[1], out y);
+            float.TryParse(positionData[2], out z);
+        }
+
+        Debug.Log("X座標" + x);
+        Debug.Log("Y座標" + y);
+        Debug.Log("X座標" + z);
     }
 }

@@ -63,6 +63,18 @@ public class ServerManager : MonoBehaviour
         }
 
         /// <summary>
+        /// Playerの座標
+        /// </summary>
+        protected override void OnMessage(MessageEventArgs e)
+        {
+            // クライアント全員に座標を送る（ブロードキャスト）
+            foreach (wsBehavior client in clientList)
+            {
+                client.Send($"Player:{pNumber} Position: {e.Data}");
+            }
+        }
+
+        /// <summary>
         /// ログアウトしてきたときに呼ばれるメソッド
         /// </summary>
         protected override void OnClose(CloseEventArgs e)
