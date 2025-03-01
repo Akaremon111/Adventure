@@ -39,9 +39,9 @@ public class othersPlayer : MonoBehaviour
         string[] positionData = data.Split(',');
         if (positionData.Length >= 3)
         {
-            float.TryParse(positionData[0], out x);
-            float.TryParse(positionData[1], out y);
-            float.TryParse(positionData[2], out z);
+            x = float.Parse(positionData[0]);
+            y = float.Parse(positionData[1]);
+            z = float.Parse(positionData[2]);
         }
 
         Debug.Log("Xç¿ïW" + x);
