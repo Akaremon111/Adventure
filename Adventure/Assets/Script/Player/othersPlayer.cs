@@ -2,6 +2,7 @@ using UnityEngine;
 using WebSocketSharp.Net;
 using WebSocketSharp;
 using UnityEngine.EventSystems;
+using System;
 
 
 public class othersPlayer : MonoBehaviour
@@ -36,16 +37,28 @@ public class othersPlayer : MonoBehaviour
 
     private void testPos(string data)
     {
-        string[] positionData = data.Split(',');
-        if (positionData.Length >= 3)
+        // "Player:{number} Position:{x,y,z}" 形式を想定
+        int index = data.IndexOf("Position:");
+        if (index != -1)
         {
-            x = float.Parse(positionData[0]);
-            y = float.Parse(positionData[1]);
-            z = float.Parse(positionData[2]);
-        }
+            // "Position:" の後ろだけを取得
+            string positionString = data.Substring(index + 9).Trim();
 
-        Debug.Log("X座標" + x);
-        Debug.Log("Y座標" + y);
-        Debug.Log("X座標" + z);
+            // 「,」で区切る
+            string[] positionData = positionString.Split(',');
+
+            // PositionDataがすべて取得出来たらキャストを行う
+            if (positionData.Length >= 3)
+            {
+                x = float.Parse(positionData[0]);
+                y = float.Parse(positionData[1]);
+                z = float.Parse(positionData[2]);
+            }
+
+            Debug.Log($"受信データ: {data}");
+            Debug.Log($"X座標: {x}");
+            Debug.Log($"Y座標: {y}");
+            Debug.Log($"Z座標: {z}");
+        }
     }
 }
