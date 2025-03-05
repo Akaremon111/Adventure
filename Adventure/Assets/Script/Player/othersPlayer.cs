@@ -18,25 +18,27 @@ public class othersPlayer : MonoBehaviour
     float y;
     float z;
 
-    // Start is called before the first frame update
     private void Awake()
     {
         // wsManagerの取得
         ws = clientManager.wsManager;
 
         // サーバーにtestPos関数を登録する
-        ws.OnMessage += (sender, e) => testPos(e.Data);
+        ws.OnMessage += (sender, e) => PlayerData(e.Data);
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         // 取得した値でプレイヤーの位置を更新
         transform.position = new Vector3(x, y, z);
     }
 
-    private void testPos(string data)
+    private void PlayerData(string data)
     {
+        string pData = data;
+        string PlayerNumber = pData.Substring(0, 8);
+
+        Debug.Log(PlayerNumber);
+
         // "Player:{number} Position:{x,y,z}" 形式を想定
         int index = data.IndexOf("Position:");
         if (index != -1)
@@ -54,11 +56,6 @@ public class othersPlayer : MonoBehaviour
                 y = float.Parse(positionData[1]);
                 z = float.Parse(positionData[2]);
             }
-
-            Debug.Log($"受信データ: {data}");
-            Debug.Log($"X座標: {x}");
-            Debug.Log($"Y座標: {y}");
-            Debug.Log($"Z座標: {z}");
         }
     }
 }
